@@ -1,12 +1,11 @@
-/*Program-1 Even Or Odd*/
+/*Program-1 EvenOrOdd*/
 class EvenOrOdd{
   public static void main(String args[]){
-    int i = 10;
-    if (i%2==0) {
-      System.out.println("Even");//it checks even 
-    }
-    else {
-      System.out.println("Odd");//it checks odd using i%2!=0
+    int num = 11;
+    if (num%2==0) {
+      System.out.println("Even");//it checks the condition is even
+    } else {
+      System.out.println("Odd");
     }
   }
 }
@@ -15,13 +14,14 @@ class EvenOrOdd{
 import java.util.Scanner;
 class Factorial{
   public static void main(String args[]){
-    Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);//takes input from the user
     System.out.print("Enter the number:");
+    int num = sc.nextInt();//takes input from the user
     long factorial = 1;
-    for (int i=1; i<=num; i++) {
-         factorial *= i;
+
+    for (i = 1; i <= num; i++) {
+        factorial *= i;
     }
-    System.out.println("Factorial of "+num+" is: "+factorial);
   }
 }
 
@@ -32,39 +32,16 @@ class Fibonacci{
     Scanner sc = new Scanner(System.in);
     System.out.print("Enter the value of n:");
     int n = sc.nextInt();
-    int a=0, b=1;
-    for (int i=2; i<=number; i++) {
-      int temp = a + b;
-      a = b;
-      b = temp;
-      System.out.println("The"+n+"th fibonacci number is:"+b);
+    for (int i=2; i<=n; i++) {
+        int temp = a + b;
+        a = b;
+        b = temp;
     }
+    System.out.println("The "+n+"th fibonacci number is:"+b);
   }
 }
 
-/*Program-4 Armstrong*/
-import java.util.Scanner;
-class Armstrong{
-  public static void main(String args[]){
-    Scanner sc = new Scanner(System.in);
-    System.out.print("Enter the number:");
-    int sc = sc.nextInt();
-    int original = num, sum = 0;
 
-    while(num!=0) {
-      int digit = num % 10;
-      sum += Math.pow(digit, 3);
-      num /= 10;
-    }
 
-    if (sum == original) {
-      System.out.println(original +" is an Armstrong");
-    } else {
-      System.out.println(original +" is not an Armstrong");
-    }
-  }
-}
-    
-      
-    
+
     
